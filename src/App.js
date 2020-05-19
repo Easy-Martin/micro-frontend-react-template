@@ -9,7 +9,7 @@ export default function App(props) {
     <Provider {...BaseStore}>
       <Router>
         <Switch>
-          <Route path="/home" render={(params) => <AppHome {...props} {...params} />}></Route>
+          <Route path="/{{name}}" render={(params) => <AppHome {...props} {...params} />}></Route>
         </Switch>
       </Router>
     </Provider>

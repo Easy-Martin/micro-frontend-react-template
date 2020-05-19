@@ -7,7 +7,7 @@ export default Object.values(configs).map((item) => ({
   container: '#subapp-container',
   activeRule: (location) => location.pathname.startsWith(`/${item.name}`),
   props: {
-    basename: '/home',
+    basename: '/{{name}}',
     domId: item.name,
   },
   entry: {

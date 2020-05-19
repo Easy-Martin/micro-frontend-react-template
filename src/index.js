@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './public-path';
 
-let mainProps = { container: document.getElementById('home') };
+let mainProps = { container: document.getElementById('{{name}}') };
 
 function render(props = {}) {
   ReactDOM.render(<App {...props} />, props.container);
@@ -17,11 +17,11 @@ if (window.__IS_RUN_SEFL__) {
 }
 
 export async function bootstrap() {
-  console.log('home app bootstraped');
+  console.log('{{name}} app bootstraped');
 }
 
 export async function mount(props) {
-  console.log('home app mount', props);
+  console.log('{{name}} app mount', props);
   const container = document.getElementById(props.domId);
   mainProps = { ...props, container };
   render(mainProps);
